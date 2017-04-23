@@ -67,8 +67,22 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Platnosc.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PotwierdzeniePlatnosci.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Platnosc.xaml.cs">
+      <DependentUpon>Platnosc.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PotwierdzeniePlatnosci.xaml.cs">
+      <DependentUpon>PotwierdzeniePlatnosci.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
