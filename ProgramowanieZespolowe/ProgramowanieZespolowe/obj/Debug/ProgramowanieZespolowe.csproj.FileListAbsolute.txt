@@ -9,3 +9,6 @@ C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Programo
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.csproj.GenerateResource.Cache
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.exe
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.pdb
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\bin\Debug\ProgramowanieZespolowe.exe.config
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.exe
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\ProgramowanieZespolowe\obj\Debug\ProgramowanieZespolowe.pdb

@@ -12,7 +12,6 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-
 namespace Cinema.View {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -22,6 +21,9 @@ namespace Cinema.View {
             InitializeComponent();
         }
 
-
+        private void button_Click(object sender, RoutedEventArgs e)
+        {
+            
+        }
     }
 }
