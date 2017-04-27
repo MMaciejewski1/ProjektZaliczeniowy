@@ -1,0 +1,7 @@
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\obj\Debug\Cinema.Controller.csprojResolveAssemblyReference.cache
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\Cinema.Controller.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\Cinema.Controller.pdb
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\Cinema.Model.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\Cinema.Model.pdb
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\obj\Debug\Cinema.Controller.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\obj\Debug\Cinema.Controller.pdb

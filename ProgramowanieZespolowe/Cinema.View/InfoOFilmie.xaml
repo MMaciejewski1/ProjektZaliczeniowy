@@ -1,0 +1,33 @@
+﻿<Window x:Class="Cinema.View.InfoOFilmie"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Cinema.View"
+        mc:Ignorable="d"
+        Title="InfoOFilmie" Height="501.033" Width="642.769">
+    <Grid>
+        <Label x:Name="tytul" Content="tytul" HorizontalAlignment="Left" Margin="272,8,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.459,-0.085"/>
+
+        <Label x:Name="obsada" Content="Obsada:" HorizontalAlignment="Left" Margin="10,251,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.526,0.591"/>
+        <Label x:Name="rezyser" Content="Rezyser: " HorizontalAlignment="Left" Margin="10,277,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.242,0.525"/>
+        <Label x:Name="dlugosc" Content="Dlugosc trwania: " HorizontalAlignment="Left" Margin="10,303,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.448,2.416"/>
+        <Label x:Name="opis" Content="Opis: " HorizontalAlignment="Left" Margin="10,329,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.498,-0.834"/>
+        <Label x:Name="obsadaZBazy" Content="Label" HorizontalAlignment="Left" Margin="114,249,-28,0" VerticalAlignment="Top" Width="549" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.723"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="rezyserZBazy" Content="Label" HorizontalAlignment="Left" Margin="116,277,-9,0" VerticalAlignment="Top" RenderTransformOrigin="2.022,4.151" Width="528"/>
+        <Label x:Name="dlugoscZBazy" Content="Label" HorizontalAlignment="Left" Margin="111,303,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.836,2.123" Width="506"/>
+        <Label x:Name="opisZBazy" Content="Label" HorizontalAlignment="Left" Margin="55,329,0,0" VerticalAlignment="Top" Height="92" Width="570"/>
+        <Button x:Name="powrot" Content="Powrot" HorizontalAlignment="Left" Margin="583,440,0,0" VerticalAlignment="Top" Width="42"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="217" Margin="179,34,0,0" VerticalAlignment="Top" Width="231" />
+
+    </Grid>
+</Window>

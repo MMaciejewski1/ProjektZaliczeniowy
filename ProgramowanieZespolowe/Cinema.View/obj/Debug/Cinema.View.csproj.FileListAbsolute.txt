@@ -18,3 +18,7 @@ C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.V
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Logowanie.baml
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Platnosc.g.cs
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Platnosc.baml
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\MainWindow1.g.cs
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\MainWindow1.baml
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\Cinema.Controller.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\Cinema.Controller.pdb

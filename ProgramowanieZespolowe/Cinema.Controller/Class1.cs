@@ -8,5 +8,6 @@ namespace Cinema.Controller
 {
     public class Class1
     {
+      
     }
 }

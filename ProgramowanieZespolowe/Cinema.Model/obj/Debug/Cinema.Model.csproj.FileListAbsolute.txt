@@ -1,0 +1,4 @@
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.pdb
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
