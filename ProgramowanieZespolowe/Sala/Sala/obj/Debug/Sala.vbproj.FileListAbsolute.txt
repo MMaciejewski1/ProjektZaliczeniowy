@@ -1,0 +1,11 @@
+D:\GitHubProject\Sala\Sala\bin\Debug\Sala.exe.config
+D:\GitHubProject\Sala\Sala\bin\Debug\Sala.exe
+D:\GitHubProject\Sala\Sala\bin\Debug\Sala.pdb
+D:\GitHubProject\Sala\Sala\bin\Debug\Sala.xml
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.vbprojResolveAssemblyReference.cache
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.Form1.resources
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.Resources.resources
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.vbproj.GenerateResource.Cache
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.exe
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.xml
+D:\GitHubProject\Sala\Sala\obj\Debug\Sala.pdb
