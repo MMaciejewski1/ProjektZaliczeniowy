@@ -4,27 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
-namespace Cinema.Controller
-
-   
+using Cinema.Model;
+namespace Cinema.Controller  
 {
     public class Uzytkownik
-    {
+    {         
         public bool walidacja(string a, string b)
-        {
-            Regex rgxlog = new Regex(@"^[a-z0-9_-]{3,16}$");
-            Regex rgxpas = new Regex(@"^[a-z0-9_-]{6,18}$");
+        {        
+            Regex rgxlog = new Regex(@"[a-z]{3,16}[0-9_-]*$");
+            Regex rgxpas = new Regex(@"[a-z]{3,18}[0-9_-]*$");
           return rgxlog.IsMatch(a) && rgxpas.IsMatch(b) ? true : false;
         }
         public bool logowanie(string login, string haslo)
         {
-            //string pobranelogin = "funkcja z bazy";
-           // string pobranehaslo = "funkcja z bazy";
-            if (walidacja(login, haslo))
-                return true;
-            else
-                return false;
+            Cinema.Model.UzytkownikB a = new UzytkownikB();
+                return a.operacjeNaBazie(login, haslo);
+          
+
         }
-      
     }
 }

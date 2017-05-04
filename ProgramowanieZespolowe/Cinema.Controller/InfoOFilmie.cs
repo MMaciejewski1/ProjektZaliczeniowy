@@ -3,36 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using MySql.Data.MySqlClient;
+using Cinema.Model;
 namespace Cinema.Controller
 {
     public class InfoOFilmie
     {
-
-        public string[] listaFilmow()
+        Model.InfoOFilmieB a = new InfoOFilmieB();
+        public List<string> listaFilmow()
         {
-            string[] tab = new string[1];
-            return tab;
+            return a.listaFilmow();
         }
         public string setOkladka(int index)
         {
-            return "http://beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg";
+            //return "http://beebom.com/wp-content/uploads/2016/01/Reverse-Image-Search-Engines-Apps-And-Its-Uses-2016.jpg";
+            return a.pobieranieDanychZBazy(index, "cover");
         }
         public string setObsada(int index)
-        {
-            return "Piotr Stramowski Andrzej Grabowski  Jacek Goc  Maja Ostaszewska";
+        {        
+            return a.pobieranieDanychZBazy(index,"cast");
         }
         public string setRezyser(int index)
-        {
-            return "Patryk Vega";
+        {            
+            return a.pobieranieDanychZBazy(index, "director");
         }
         public string setDlugosc(int index)
         {
-            return "2 godz. 13 min. ";
+            return a.pobieranieDanychZBazy(index, "duration_min");
         }
         public string setOpis(int index)
         {
-            return "Będzie zabójstwo. I ja w nim będę brał udział.A mówię ci to tylko dlatego, że mi tego nie udowodnisz. \nTymi słowami Bogusław Linda, w roli gangstera złamanego przeszłością, powraca na wielki ekran. \nW filmie Patryka Vegi Pitbull.Nowe porządki rzuca wyzwanie niepokornemu policjantowi o pseudonimie Majami z mokotowskiej komendy. Gdy Majami zaczyna rozpracowywać grupę  gangsterów, jego droga przecina się z bohaterami dawnego Pitbulla - Gebelsem, Igorem i Barszczykiem.\n Okazuje się, że sekcja zabójstw z Pałacu Mostowskich rozpracowuję Grupę Mokotowską do tematu Gangu obcinaczy palców, odpowiedzialnego za serię porwań i zabójstw.\n Policjanci z obydwu komend zaczynają rozumieć, że mają do czynienia z najsilniejszą organizacją przestępczą w Polsce i jeśli chcą ją rozbić, muszą ze sobą współpracować. ";
+            return a.pobieranieDanychZBazy(index, "description");
         }
     }
 }

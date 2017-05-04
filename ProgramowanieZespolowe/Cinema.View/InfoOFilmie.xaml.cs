@@ -24,11 +24,12 @@ namespace Cinema.View
             InitializeComponent();
             Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
            image.Source = new BitmapImage(
-        new Uri(a.setOkladka(0), UriKind.Absolute));
-            obsadaZBazy.Content=a.setObsada(0);
-            rezyserZBazy.Content = a.setRezyser(0);
-            dlugoscZBazy.Content = a.setDlugosc(0);
-            opisZBazy.Content = a.setOpis(0);
+        new Uri(a.setOkladka(4), UriKind.Absolute));
+            obsadaZBazy.Content=a.setObsada(4);
+            rezyserZBazy.Content = a.setRezyser(4);
+            dlugoscZBazy.Content = a.setDlugosc(4);
+            opisZBazy.Content = a.setOpis(4);
+          
         }
     }
 }

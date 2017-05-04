@@ -11,7 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-
+using Cinema.Controller;
 namespace Cinema.View
 {
     /// <summary>
@@ -21,7 +21,14 @@ namespace Cinema.View
     {
         public Logowanie()
         {
+           
             InitializeComponent();
+        }
+
+        private void loginButton_Click(object sender, RoutedEventArgs e)
+        {
+            Cinema.Controller.Uzytkownik m = new Uzytkownik();
+            namelabel.Content = m.logowanie(nameTestBox.Text, passwordTestBox.Text); 
         }
     }
 }

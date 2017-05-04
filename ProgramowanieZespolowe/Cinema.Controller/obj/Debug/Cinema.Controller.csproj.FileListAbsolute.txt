@@ -5,3 +5,4 @@ C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.C
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\Cinema.Model.pdb
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\obj\Debug\Cinema.Controller.dll
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\obj\Debug\Cinema.Controller.pdb
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Controller\bin\Debug\MySql.Data.dll

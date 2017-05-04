@@ -10,11 +10,11 @@
         MaxHeight="350" MaxWidth="525">
     <Grid>
         <Grid HorizontalAlignment="Left" Height="309" VerticalAlignment="Top" Width="507" Margin="10,0,0,0">
-            <Label x:Name="namelabel" Content="Login" Margin="0,69,308,0" VerticalAlignment="Top" RenderTransformOrigin="1.981,8.846" HorizontalAlignment="Right" Width="39"/>
+            <Label x:Name="namelabel" Content="Login" Margin="0,69,10,0" VerticalAlignment="Top" RenderTransformOrigin="1.981,8.846" HorizontalAlignment="Right" Width="497"/>
             <Label x:Name="passwordLabel" Content="Haslo" Margin="160,128,307,0" VerticalAlignment="Top" RenderTransformOrigin="0.393,0.977"/>
             <TextBox x:Name="nameTestBox" Margin="160,100,227,186" TextWrapping="Wrap" Text=""/>
             <TextBox x:Name="passwordTestBox" Height="23" Margin="160,0,227,127" TextWrapping="Wrap" Text="" VerticalAlignment="Bottom"/>
-            <Button x:Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="160,187,0,0" VerticalAlignment="Top" Width="75"/>
+            <Button x:Name="loginButton" Content="Zaloguj" HorizontalAlignment="Left" Margin="160,187,0,0" VerticalAlignment="Top" Width="75" Click="loginButton_Click"/>
             <Button x:Name="guestButton" Content="Zaloguj jako Gosc" Margin="0,212,227,77" RenderTransformOrigin="0.368,0.504" HorizontalAlignment="Right" Width="120"/>
             <Button x:Name="registerButton" Content="Rejestracja" HorizontalAlignment="Left" Margin="160,237,0,0" VerticalAlignment="Top" Width="75"/>
         </Grid>
