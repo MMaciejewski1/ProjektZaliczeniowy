@@ -24,8 +24,7 @@ namespace Cinema.View {
             Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
             tab = a.listaFilmow();
              for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
-            
-            
+
         }
 
         private void button_Click(object sender, RoutedEventArgs e)
