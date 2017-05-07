@@ -20,16 +20,23 @@ namespace Cinema.View {
     public partial class MainWindow : Window {
         public MainWindow() {
             InitializeComponent();
-              List<string> tab = new List<string>();
-            Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
-            tab = a.listaFilmow();
-             for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
-
-        }
-
-        private void button_Click(object sender, RoutedEventArgs e)
+            listView.Items.Add("Proszem wybrac date");
+            List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
+            for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
+        }  
+        private void calendar_SelectedDateChanged(object sender, RoutedEventArgs e)
         {
-            
+            listView.Items.Clear();
+            DateTime? date = calendar.SelectedDate;
+            string a = date.ToString();
+            string b = a.Substring(0, a.IndexOf('.'));
+            string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
+            string d = a.Substring(a.IndexOf(c) + 3, 4);
+            List<string> tab = new List<string>();
+            Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
+            label1.Content = date.ToString();
+            tab = ac.getlistaFilmow(d, c, b);
+            for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
         }
     }
 }

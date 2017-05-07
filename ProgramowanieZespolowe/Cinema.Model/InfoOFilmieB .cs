@@ -26,6 +26,25 @@ namespace Cinema.Model
             cn.Close();
             return tab;
         }
+        public string FilmPoDacie(int index)
+        {
+            cn.Open();
+            MySqlCommand cmd = new MySqlCommand("select title from movie where id ="+index, cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            if (a.Read())
+            {
+                a.Read();
+                string c = a.GetString("title");
+                a.Close();
+                cn.Close();
+                return c;
+            }
+            else
+            {
+                cn.Close();
+                return "Blad Bazy";
+            }
+        }
         public string pobieranieDanychZBazy(int index, string kol)
         {
             cn.Open();

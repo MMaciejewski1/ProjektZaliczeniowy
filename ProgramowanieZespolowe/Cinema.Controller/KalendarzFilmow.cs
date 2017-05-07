@@ -16,5 +16,9 @@ namespace Cinema.Controller
         {
             return kfb.listaFilmow(year, month,day);
         }
+        public List<String> getGodziny()
+        {
+            return kfb.godziny();
+        }
     }
 }
