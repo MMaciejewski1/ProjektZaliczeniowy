@@ -18,12 +18,16 @@ namespace Cinema.View {
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window {
+        //zmienna wysylana do interfejsu InfoOFilmie 
+        private String selectedFilm;
         public MainWindow() {
             InitializeComponent();
             listView.Items.Add("Proszem wybrac date");
             List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
             for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
         }  
+
+
         private void calendar_SelectedDateChanged(object sender, RoutedEventArgs e)
         {
             listView.Items.Clear();
@@ -37,6 +41,28 @@ namespace Cinema.View {
             label1.Content = date.ToString();
             tab = ac.getlistaFilmow(d, c, b);
             for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
+        }
+
+        private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (listView.SelectedItem != null)
+            {
+                String test = listView.SelectedItem.ToString();
+                if (!test.Equals("Proszem wybrac date")) {
+                    wybranyFilm.Content = test;
+                    selectedFilm = test;
+                }
+            }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(selectedFilm == null)
+            {
+                    selectedFilm = "Matrix";
+            }
+            InfoOFilmie iOF = new InfoOFilmie(selectedFilm);
+            iOF.Show();
         }
     }
 }

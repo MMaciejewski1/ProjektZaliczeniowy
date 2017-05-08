@@ -30,5 +30,12 @@ namespace Cinema.View
             Cinema.Controller.Uzytkownik m = new Uzytkownik();
             namelabel.Content = m.logowanie(nameTestBox.Text, passwordTestBox.Text); 
         }
+
+        private void guestButton_Click(object sender, RoutedEventArgs e)
+        {
+            //window2 win2 = new window2();
+            //win2.Show();
+            //this.Close();
+        }
     }
 }

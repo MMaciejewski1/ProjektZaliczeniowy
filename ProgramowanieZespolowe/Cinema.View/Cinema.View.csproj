@@ -62,7 +62,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="logowanie.xaml">
+    <Page Include="Logowanie.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -77,8 +77,8 @@
     <Compile Include="InfoOFilmie.xaml.cs">
       <DependentUpon>InfoOFilmie.xaml</DependentUpon>
     </Compile>
-    <Compile Include="logowanie.xaml.cs">
-      <DependentUpon>logowanie.xaml</DependentUpon>
+    <Compile Include="Logowanie.xaml.cs">
+      <DependentUpon>Logowanie.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

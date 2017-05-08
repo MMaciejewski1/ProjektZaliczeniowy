@@ -35,5 +35,9 @@ namespace Cinema.Controller
         {
             return a.pobieranieDanychZBazy(index, "description");
         }
+        public int getId(String filmName)
+        {
+            return a.pobierzIdFilmu(filmName);
+        }
     }
 }

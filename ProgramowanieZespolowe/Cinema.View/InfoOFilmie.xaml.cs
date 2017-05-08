@@ -19,17 +19,26 @@ namespace Cinema.View
     /// </summary>
     public partial class InfoOFilmie : Window
     {
-        public InfoOFilmie()
+        public InfoOFilmie(string jakiFilm)
         {
             InitializeComponent();
             Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
-           image.Source = new BitmapImage(
-        new Uri(a.setOkladka(4), UriKind.Absolute));
-            obsadaZBazy.Content=a.setObsada(4);
-            rezyserZBazy.Content = a.setRezyser(4);
-            dlugoscZBazy.Content = a.setDlugosc(4);
-            opisZBazy.Content = a.setOpis(4);
+
+            String jakiFilmWybrany = jakiFilm;      
+            int idFilmu = a.getId(jakiFilm);
+
+            image.Source = new BitmapImage(
+        new Uri(a.setOkladka(idFilmu), UriKind.Absolute));
+            obsadaZBazy.Content=a.setObsada(idFilmu);
+            rezyserZBazy.Content = a.setRezyser(idFilmu);
+            dlugoscZBazy.Content = a.setDlugosc(idFilmu);
+            opisZBazy.Content = a.setOpis(idFilmu);
           
+        }
+
+        private void powrot_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

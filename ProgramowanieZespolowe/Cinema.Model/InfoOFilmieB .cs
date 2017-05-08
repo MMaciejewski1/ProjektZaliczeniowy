@@ -26,6 +26,25 @@ namespace Cinema.Model
             cn.Close();
             return tab;
         }
+
+        public int pobierzIdFilmu(String nazwaFilmu)
+        {
+            cn.Open();
+            MySqlCommand cmd = new MySqlCommand("select id from movie where title =" + "'"+nazwaFilmu+"'", cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            if (a.Read())
+            {
+                a.Read();
+                int c = a.GetInt32("id");
+                a.Close();
+                cn.Close();
+                return c;
+            }
+            else
+            {
+                return 0;
+            }
+        }
         public string FilmPoDacie(int index)
         {
             cn.Open();
