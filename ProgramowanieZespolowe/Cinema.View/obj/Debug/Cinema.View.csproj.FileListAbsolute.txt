@@ -79,7 +79,7 @@ C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.g.resources
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.Properties.Resources.resources
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.csproj.GenerateResource.Cache
-C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Logowanie.g.cs
-C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Logowanie.baml
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\InfoOFilmie.g.cs
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\InfoOFilmie.baml
+C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Repertuar.g.cs
+C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Repertuar.baml

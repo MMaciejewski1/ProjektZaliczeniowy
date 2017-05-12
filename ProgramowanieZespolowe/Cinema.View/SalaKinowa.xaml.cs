@@ -19,14 +19,25 @@ namespace Cinema.View
     /// </summary>
     public partial class SalaKinowa : Window
     {
-        public SalaKinowa()
+        private String user;
+        public SalaKinowa(String user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            MainWindow repertuar = new MainWindow(user);
+            repertuar.Show();
+            this.Close();
+        }
 
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            PotwierdzeniePlatnosci potplatnosc= new PotwierdzeniePlatnosci(user);
+            potplatnosc.Show();
+            this.Close();
         }
     }
 }

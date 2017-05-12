@@ -19,9 +19,25 @@ namespace Cinema.View
     /// </summary>
     public partial class PotwierdzeniePlatnosci : Window
     {
-        public PotwierdzeniePlatnosci()
+        private String user;
+        public PotwierdzeniePlatnosci(String user)
         {
             InitializeComponent();
+            this.user = user;
+        }
+
+        private void Anuluj_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow repertuar = new MainWindow(user);
+            repertuar.Show();
+            this.Close();
+        }
+
+        private void Potwierdz_Click(object sender, RoutedEventArgs e)
+        {
+            Platnosc platnosc = new Platnosc(user);
+            platnosc.Show();
+            this.Close();
         }
     }
 }

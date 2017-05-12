@@ -19,10 +19,18 @@ namespace Cinema.View
     /// </summary>
     public partial class Platnosc : Window
     {
-        public Platnosc()
+        private String user;
+        public Platnosc(String user)
         {
             InitializeComponent();
+            this.user = user;
         }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow mw = new MainWindow(user);
+            mw.Show();
+            this.Close();
+        }
     }
 }
