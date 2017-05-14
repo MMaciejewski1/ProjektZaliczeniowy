@@ -70,10 +70,12 @@ namespace Cinema.View {
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            user = "gosc";
-            SalaKinowa salakinowa  = new SalaKinowa(user);
-            salakinowa.Show();
-            this.Close();
+            if(selectedFilm != null)
+            {
+                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm);
+                salakinowa.Show();
+                this.Close();
+            }
         }
     }
 }

@@ -29,12 +29,22 @@ namespace Cinema.View
         private void loginButton_Click(object sender, RoutedEventArgs e)
         {
             Cinema.Controller.Uzytkownik m = new Uzytkownik();
-            namelabel.Content = m.logowanie(nameTestBox.Text, passwordTestBox.Text); 
+            bool zalogowanie = m.logowanie(nameTestBox.Text, passwordTestBox.Text);
+            namelabel.Content = zalogowanie; 
+            if(zalogowanie == true)
+            {
+                user = m.getUserPosition(nameTestBox.Text);
+                //namelabel.Content = user; -- Do celow testowych
+
+                MainWindow repertuar = new MainWindow(user);
+                repertuar.Show();
+                this.Close();
+            }
         }
 
         private void guestButton_Click(object sender, RoutedEventArgs e)
         {
-            user = "gosc";
+            user = "user";
             MainWindow repertuar = new MainWindow(user);
             repertuar.Show();
             this.Close();

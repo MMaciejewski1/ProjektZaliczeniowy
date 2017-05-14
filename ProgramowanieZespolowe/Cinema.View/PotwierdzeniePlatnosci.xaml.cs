@@ -20,10 +20,14 @@ namespace Cinema.View
     public partial class PotwierdzeniePlatnosci : Window
     {
         private String user;
-        public PotwierdzeniePlatnosci(String user)
+        private String selectedFilm;
+        public PotwierdzeniePlatnosci(String user, String selectedFilm)
         {
             InitializeComponent();
             this.user = user;
+            this.selectedFilm = selectedFilm;
+            JakiFilm.Content = selectedFilm;
+
         }
 
         private void Anuluj_Click(object sender, RoutedEventArgs e)

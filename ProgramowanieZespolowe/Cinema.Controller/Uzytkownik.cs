@@ -20,7 +20,11 @@ namespace Cinema.Controller
             Cinema.Model.UzytkownikB a = new UzytkownikB();
                 return a.operacjeNaBazie(login, haslo);
           
-
+        }
+        public string getUserPosition(String position)
+        {
+            Cinema.Model.UzytkownikB a = new UzytkownikB();
+            return a.getUserPositionB(position);
         }
     }
 }
