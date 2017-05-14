@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="InfoOFilmieB .cs" />
     <Compile Include="KalendarzFilmowB.cs" />
+    <Compile Include="SalaB.cs" />
     <Compile Include="UzytkownikB.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

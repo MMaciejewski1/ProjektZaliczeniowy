@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:Cinema.View"
         mc:Ignorable="d"
         Title="SalaKinowa" Height="457.313" Width="704.333">
-    <Grid>
+    <Grid x:Name="grid">
         <Grid HorizontalAlignment="Left" Height="423" VerticalAlignment="Top" Width="696">
             <Separator HorizontalAlignment="Left" Height="22" Margin="0,297,0,0" VerticalAlignment="Top" Width="696"/>
             <Separator HorizontalAlignment="Left" Height="100" Margin="-48,58,0,0" VerticalAlignment="Top" Width="220" RenderTransformOrigin="0.5,0.5">
@@ -20,41 +20,7 @@
                 </Separator.RenderTransform>
             </Separator>
             <Separator HorizontalAlignment="Left" Height="58" Margin="0,59,0,0" VerticalAlignment="Top" Width="696" RenderTransformOrigin="1.21,-2.26"/>
-            <Button x:Name="button1" Content="1" HorizontalAlignment="Left" Margin="112,130,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button2" Content="2" HorizontalAlignment="Left" Margin="187,130,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button3" Content="3" HorizontalAlignment="Left" Margin="261,130,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button4" Content="4" HorizontalAlignment="Left" Margin="334,130,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button5" Content="5" HorizontalAlignment="Left" Margin="417,130,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button6" Content="6" HorizontalAlignment="Left" Margin="497,130,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button7" Content="7" HorizontalAlignment="Left" Margin="564,130,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button8" Content="8" HorizontalAlignment="Left" Margin="112,165,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button9" Content="9" HorizontalAlignment="Left" Margin="187,165,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button10" Content="10" HorizontalAlignment="Left" Margin="261,165,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button11" Content="11" HorizontalAlignment="Left" Margin="334,165,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button12" Content="12" HorizontalAlignment="Left" Margin="417,165,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button13" Content="13" HorizontalAlignment="Left" Margin="497,165,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button14" Content="14" HorizontalAlignment="Left" Margin="564,165,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button15" Content="15" HorizontalAlignment="Left" Margin="112,200,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button16" Content="16" HorizontalAlignment="Left" Margin="187,200,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button17" Content="17" HorizontalAlignment="Left" Margin="261,200,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button18" Content="17" HorizontalAlignment="Left" Margin="334,200,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button19" Content="19" HorizontalAlignment="Left" Margin="417,200,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button20" Content="20" HorizontalAlignment="Left" Margin="497,200,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button21" Content="21" HorizontalAlignment="Left" Margin="564,200,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button22" Content="22" HorizontalAlignment="Left" Margin="112,235,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button23" Content="23" HorizontalAlignment="Left" Margin="187,235,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button24" Content="24" HorizontalAlignment="Left" Margin="261,235,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button25" Content="25" HorizontalAlignment="Left" Margin="334,235,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button26" Content="26" HorizontalAlignment="Left" Margin="417,235,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button27" Content="27" HorizontalAlignment="Left" Margin="497,235,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button28" Content="28" HorizontalAlignment="Left" Margin="564,235,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button29" Content="29" HorizontalAlignment="Left" Margin="112,270,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button30" Content="30" HorizontalAlignment="Left" Margin="187,270,0,0" VerticalAlignment="Top" Width="40"/>
-            <Button x:Name="button31" Content="31" HorizontalAlignment="Left" Margin="261,270,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button32" Content="32" HorizontalAlignment="Left" Margin="334,270,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button33" Content="33" HorizontalAlignment="Left" Margin="417,270,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button34" Content="34" HorizontalAlignment="Left" Margin="497,270,0,0" VerticalAlignment="Top" Width="45"/>
-            <Button x:Name="button35" Content="35" HorizontalAlignment="Left" Margin="564,270,0,0" VerticalAlignment="Top" Width="45"/>
+            
             <Label Content="Ekran z Filmem" HorizontalAlignment="Left" Margin="272,10,0,0" VerticalAlignment="Top" Width="139" FontSize="18" FontWeight="Bold"/>
             <Label Content="Rzędy" HorizontalAlignment="Left" Margin="10,92,0,0" VerticalAlignment="Top" Width="60" Height="25"/>
             <Label Content="1" HorizontalAlignment="Left" Margin="10,127,0,0" VerticalAlignment="Top" Height="30" Width="60"/>

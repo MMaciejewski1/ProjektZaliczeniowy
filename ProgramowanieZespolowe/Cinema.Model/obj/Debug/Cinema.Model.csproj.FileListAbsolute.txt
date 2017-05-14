@@ -15,3 +15,8 @@ C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
 C:\Users\Majkel\Source\Reposnn\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.dll
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.pdb
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
