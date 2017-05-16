@@ -49,5 +49,12 @@ namespace Cinema.View
             repertuar.Show();
             this.Close();
         }
+
+        private void registerButton_Click(object sender, RoutedEventArgs e)
+        {
+            Registration a = new Registration();
+            a.Show();
+            this.Close();
+        }
     }
 }

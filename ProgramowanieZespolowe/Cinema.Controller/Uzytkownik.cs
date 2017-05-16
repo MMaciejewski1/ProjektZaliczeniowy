@@ -26,5 +26,18 @@ namespace Cinema.Controller
             Cinema.Model.UzytkownikB a = new UzytkownikB();
             return a.getUserPositionB(position);
         }
+        public string addUSer(string login,string password,string position) {
+            Cinema.Model.UzytkownikB a = new UzytkownikB();
+            if (walidacja(login, password))
+            {
+
+                return a.insertNewUSer(login, password, a.genID(), position); ;
+            }else return "rejestracja nie powiodla sie";
+        }
+        public List<String> getAllPosition()
+        {
+            Cinema.Model.UzytkownikB a = new UzytkownikB();
+            return a.getUserPositions();
+        }
     }
 }

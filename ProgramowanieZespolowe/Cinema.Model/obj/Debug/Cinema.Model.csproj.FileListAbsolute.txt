@@ -20,3 +20,9 @@ C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cin
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.dll
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.pdb
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\MySql.Data.dll
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
+C:\Users\Majkel\Source\Reposy\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb

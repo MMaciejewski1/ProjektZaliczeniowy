@@ -44,5 +44,63 @@ namespace Cinema.Model
             }
             return position;
         }
+
+        public List<string> getUserPositions()
+        {
+            List<string> tab = new List<string>();
+            cn.Open();
+            MySqlCommand cmd = new MySqlCommand("select DISTINCT position from user", cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            while (a.Read())
+            {
+                tab.Add(a.GetString(0));
+            }
+            a.Close();
+            cn.Close();
+            return tab;
+        }
+        public bool checkExistUser(String login)
+    {
+        cn.Open();
+            bool te=true;
+            MySqlCommand cmd = new MySqlCommand("select position from user where username='" + login + "'", cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            if (a.Read())
+            {
+                te = false;
+            }
+            
+                cn.Close();
+        return te;
+    }
+
+        public int genID()
+        {
+            cn.Open();
+            int l = 999;
+            MySqlCommand cmd = new MySqlCommand("select count(*) from user", cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            if (a.Read())
+            {
+                l=a.GetInt32(0);
+            }
+            cn.Close();
+            return l+1 ;
+        }
+
+
+        public string insertNewUSer(string login, string password, int id, string position)
+        {
+
+            
+            if (checkExistUser(login))
+            {
+                cn.Open();
+                MySqlCommand cmd = new MySqlCommand("INSERT INTO user(  id , username ,  password ,  position ) VALUES(" + id + " , '" + login + "' ,  '" + password + "' , '" + position + "')", cn);
+                MySqlDataReader a = cmd.ExecuteReader();
+                a.Read();
+                return "rejestracja powiodla sie";
+            }else return "rejestracja nie powiodla sie ";
+        }
     }
 }
