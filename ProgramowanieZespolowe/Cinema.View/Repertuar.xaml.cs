@@ -36,9 +36,9 @@ namespace Cinema.View {
             listView.Items.Clear();
             DateTime? date = calendar.SelectedDate;
             string a = date.ToString();
-            string b = a.Substring(8, 2);
-            string c = a.Substring(5, 2);
-            string d = a.Substring(0, 4);
+            string b = a.Substring(0, a.IndexOf('.'));
+            string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
+            string d = a.Substring(a.IndexOf(c) + 3, 4);
 
             List<string> tab = new List<string>();
             Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
