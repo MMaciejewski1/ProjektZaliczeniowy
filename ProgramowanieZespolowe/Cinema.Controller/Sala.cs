@@ -31,22 +31,36 @@ namespace Cinema.Controller
                     sala[i][j] = 0;
                 }
             }
-            int[][] zajete = salaB.miejca_zarezerwowane(1);
+            List<int> zajete = salaB.miejca_zarezerwowane(1);
             if (zajete == null)
             {
-                //zmieniam 1 wartość żeby pokać jak działa gdzyby miejsce było zajęte
-                sala[0][0] = 1;
                 return sala;
             }
-            for (int i = 0; i < zajete.Length; i++)
+            for (int i = 0; i < zajete.Count - 1; i = i + 2)//zajete.Length
             {
-                sala[zajete[i][0]][zajete[i][1]] = 1;
+                sala[zajete.ElementAt(i) - 1][zajete.ElementAt(i + 1) - 1] = 1;
             }
 
 
 
 
             return sala;
+        }
+
+
+        public void rezerwacja_nowa()
+        {
+
+        }
+
+        public void rezerwacjamiejsce(int row, int number)//int ilosc miejcs w rzedzie dl tablicy
+        {
+
+            salaB.rezerwacjamiejsce(15, ((row - 1) * 7) + number, 1);
+        }
+        public void czysc()
+        {
+            salaB.czysc();
         }
     }
 }

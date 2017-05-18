@@ -205,3 +205,5 @@ C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View
 C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.csproj.GenerateResource.Cache
 C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.exe
 C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Cinema.View.pdb
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.g.cs
+C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.baml
