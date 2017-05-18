@@ -7,13 +7,24 @@
         mc:Ignorable="d"
         Title="Platnosc" Height="400" Width="600">
     <Grid>
-        <Label Content="Płatność" HorizontalAlignment="Left" Margin="233,10,0,0" VerticalAlignment="Top" Width="127" FontSize="24" FontWeight="Bold" FontStyle="Italic"/>
-        <Label Content="Nr. konta bankowego" HorizontalAlignment="Left" Margin="26,77,0,0" VerticalAlignment="Top" Width="133"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="26,108,0,0" TextWrapping="Wrap" Text="85465743624724747" VerticalAlignment="Top" Width="556"/>
-        <Label Content="Sikrety" HorizontalAlignment="Left" Margin="26,150,0,0" VerticalAlignment="Top" Width="108"/>
-        <TextBox HorizontalAlignment="Left" Height="23" Margin="26,181,0,0" TextWrapping="Wrap" Text="#############" VerticalAlignment="Top" Width="556"/>
-        <Button Content="Drukuj" HorizontalAlignment="Left" Margin="26,306,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button Content="Ok" HorizontalAlignment="Left" Margin="507,306,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <GroupBox Header="Payment info:" HorizontalAlignment="Left" Margin="10,37,0,0" VerticalAlignment="Top" Height="136" Width="561" FontSize="20"/>
+
+        <Label Content="Credit Card Number:" BorderBrush="Red" HorizontalAlignment="Left" Margin="26,81,0,0" VerticalAlignment="Top" Width="123" x:Name="CreditCardNumber_label"/>
+        <TextBox HorizontalAlignment="Left" Height="25" Margin="149,82,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="115" x:Name="CreditCardNumber_textbox" MaxLength="16" RenderTransformOrigin="0.826,0.6"/>
+        <Button Content="Drukuj" HorizontalAlignment="Left" Margin="26,316,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button Content="Ok" HorizontalAlignment="Left" Margin="460,311,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Button Content="Anuluj" HorizontalAlignment="Left" Margin="375,311,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <Label Content="Type:" HorizontalAlignment="Left" Margin="375,79,0,0" VerticalAlignment="Top" Height="28"/>
+        <ComboBox HorizontalAlignment="Left" Margin="415,82,0,0" VerticalAlignment="Top" Width="120" x:Name="Type_combobox" >
+            <ComboBoxItem Content="Visa" HorizontalAlignment="Left" Width="118"/>
+            <ComboBoxItem Content="Master Card" HorizontalAlignment="Left" Width="118"/>
+        </ComboBox>
+        <Label Content="Expire Date (mm/yy):" HorizontalAlignment="Left" Margin="26,119,0,0" VerticalAlignment="Top" Width="123"/>
+        <Label Content="Security Code:" HorizontalAlignment="Left" Margin="326,121,0,0" VerticalAlignment="Top" Width="89"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="149,123,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" x:Name="ExpireDateMm_textbox" MaxLength="2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="215,124,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="49" x:Name="ExpireDateYy_textbox" MaxLength="2"/>
+        <Label Content="/" HorizontalAlignment="Left" Margin="199,121,0,0" VerticalAlignment="Top" Height="28" Width="16" RenderTransformOrigin="0.938,0.536"/>
+        <PasswordBox HorizontalAlignment="Left" Margin="415,123,0,0" VerticalAlignment="Top" Width="120" Height="22" x:Name="SecurityCode_passwordBox"/>
 
     </Grid>
 </Window>
