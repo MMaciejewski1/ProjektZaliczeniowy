@@ -40,7 +40,7 @@ namespace Cinema.Model
             while (a.Read())
             {
                 zajete[i] = new int[] { a.GetInt32(1), a.GetInt32(2) };
-                i++;
+                i++; /// coś tutaj nie tak ?
             }
 
 

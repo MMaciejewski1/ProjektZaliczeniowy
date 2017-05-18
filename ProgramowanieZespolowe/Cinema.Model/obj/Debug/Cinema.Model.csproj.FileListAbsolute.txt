@@ -31,3 +31,8 @@ C:\Users\Dima\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Mod
 C:\Users\Dima\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
 C:\Users\Dima\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
 C:\Users\Dima\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
+C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.dll
+C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\bin\Debug\Cinema.Model.pdb
+C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.csprojResolveAssemblyReference.cache
+C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.dll
+C:\Users\bod\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.Model\obj\Debug\Cinema.Model.pdb
