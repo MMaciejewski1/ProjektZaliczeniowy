@@ -26,8 +26,8 @@ namespace Cinema.View {
             InitializeComponent();
             this.user = user;
             listView.Items.Add("Proszem wybrac date");
-            List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
-            for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
+            //List<string> tab = new Cinema.Controller.KalendarzFilmow().getGodziny();
+            //for (int i = 0; i < tab.Count; i++) comboBox.Items.Add(tab[i]);
         }  
 
 
@@ -45,6 +45,7 @@ namespace Cinema.View {
             label1.Content = date.ToString();
             tab = ac.getlistaFilmow(d, c, b);
             for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
+    
         }
 
         private void listView_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -55,6 +56,11 @@ namespace Cinema.View {
                 if (!test.Equals("Proszem wybrac date")) {
                     wybranyFilm.Content = test;
                     selectedFilm = test;
+                    comboBox.Items.Clear();
+                    Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
+                    int idFilmu = a.getId(selectedFilm);
+                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(idFilmu);
+                    for (int i = 0; i < tabgodziny.Count; i++) comboBox.Items.Add(tabgodziny[i]);
                 }
             }
         }
@@ -71,9 +77,10 @@ namespace Cinema.View {
 
         private void button_Click_1(object sender, RoutedEventArgs e)
         {
-            if(selectedFilm != null)
+            if(selectedFilm != null && comboBox.SelectedItem != null)
             {
-                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm);
+                string date = comboBox.SelectedItem.ToString();
+                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date);
                 salakinowa.Show();
                 this.Close();
             }

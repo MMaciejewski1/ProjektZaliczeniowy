@@ -21,15 +21,18 @@ namespace Cinema.View
     {
         private String user;
         private String selectedFilm;
-        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<string> miejsca)
+        private String date;
+        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<string> miejsca, String date)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
+            this.date = date;
             JakiFilm.Content = selectedFilm;
 
             JakiRzad.Content = "Rząd";
             JakieMiejsce.Content = "Miejsce";
+            KiedyLeci.Content = date;
             for (int i = 0; i < miejsca.Count; i = i + 2)
             {
                 JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);

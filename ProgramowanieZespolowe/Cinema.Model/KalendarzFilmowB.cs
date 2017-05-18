@@ -9,13 +9,14 @@ namespace Cinema.Model
 {
     public class KalendarzFilmowB
     {
+
         MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;");
 
-             public List<String> godziny()        {
+        public List<String> godziny(int idFilmu)        {
             InfoOFilmieB b = new InfoOFilmieB();
             List<String> tab = new List<String>();
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening", cn);
+            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id ="+ idFilmu, cn);
             MySqlDataReader a = cmd.ExecuteReader();
             while (a.Read())
             {
@@ -43,6 +44,7 @@ namespace Cinema.Model
             cn.Close();
             return tab;
         }
+
     }
 
 }

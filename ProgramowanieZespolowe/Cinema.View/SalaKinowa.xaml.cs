@@ -23,12 +23,17 @@ namespace Cinema.View
         private String selectedFilm;
         private int screening_id = 1;
         private byte[][] sala;
+        private String date;
         List<string> miejsca = new List<string>();
-        public SalaKinowa(String user, String selectedFilm)
+        public SalaKinowa(String user, String selectedFilm, String date)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
+            this.date = date;
+            if (user.Equals("user")){
+                buttonclear.Visibility = System.Windows.Visibility.Hidden;
+            };
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
             sala = s.sala(screening_id);
             for (int i = 0; i < sala.Length; i++)
@@ -120,13 +125,13 @@ namespace Cinema.View
 
             if (miejsca.Count != 0)
             {
-                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca);
+                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca, date);
                 potplatnosc.Show();
                 this.Close();
             }
             else
             {
-                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null);
+                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null, date);
                 potplatnosc.Show();
                 this.Close();
             }
