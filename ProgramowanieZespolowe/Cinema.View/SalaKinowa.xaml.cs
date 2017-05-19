@@ -24,7 +24,7 @@ namespace Cinema.View
         private int screening_id = 1;
         private byte[][] sala;
         private String date;
-        List<string> miejsca = new List<string>();
+        List<int> miejsca = new List<int>();
         public SalaKinowa(String user, String selectedFilm, String date)
         {
             InitializeComponent();
@@ -72,13 +72,11 @@ namespace Cinema.View
         }
         private void miejce_click(object sender, RoutedEventArgs e)
         {
-            // if (miejcetylko1 == true) return;//jeśli ma być tylko 1 możliwe
             Button miejce = sender as Button;
             miejce.Background = Brushes.Green;
             sala[(miejce.Tag as int[])[0]][(miejce.Tag as int[])[1]] = 2;
             miejce.Click -= new System.Windows.RoutedEventHandler(this.miejce_click);
             miejce.Click += new System.Windows.RoutedEventHandler(this.miejce_cancel_click);
-            //miejcetylko1 = true;//jeśli ma być tylko 1 możliwe
         }
         private void miejce_cancel_click(object sender, RoutedEventArgs e)
         {
@@ -87,38 +85,17 @@ namespace Cinema.View
             sala[(miejce.Tag as int[])[0]][(miejce.Tag as int[])[1]] = 0;
             miejce.Click -= new System.Windows.RoutedEventHandler(this.miejce_cancel_click);
             miejce.Click += new System.Windows.RoutedEventHandler(this.miejce_click);
-            // miejcetylko1 = false;//jeśli ma być tylko 1 możliwe
         }
-        /*
-        private void pokazmiejca()
-        {
-
-            for (int i = 0; i < sala.Length; i++)
-            {
-                for (int j = 0; j < sala[i].Length; j++)
-                {
-                    if (sala[i][j] == 2)
-                    {
-                        MessageBox.Show("rząd" + (i + 1).ToString() + "numer" + (j + 1).ToString());
-                    }
-                }
-            }
-
-        }
-        */
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
-            //pokazmiejca();
-            Cinema.Controller.Sala s = new Cinema.Controller.Sala();
             for (int i = 0; i < sala.Length; i++)
             {
                 for (int j = 0; j < sala[i].Length; j++)
                 {
                     if (sala[i][j] == 2)
                     {
-                        s.rezerwacjamiejsce(i + 1, j + 1);
-                        miejsca.Add((i + 1).ToString());
-                        miejsca.Add((j + 1).ToString());
+                        miejsca.Add((i + 1));
+                        miejsca.Add((j + 1));
                     }
                 }
             }
@@ -131,7 +108,7 @@ namespace Cinema.View
             }
             else
             {
-                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null, date);
+               PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null, date);
                 potplatnosc.Show();
                 this.Close();
             }
@@ -141,6 +118,9 @@ namespace Cinema.View
         {
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
             s.czysc();
+            SalaKinowa odswiez = new SalaKinowa(this.user, this.selectedFilm, this.date);
+            odswiez.Show();
+            this.Close();
         }
     }
     }

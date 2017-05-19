@@ -22,23 +22,25 @@ namespace Cinema.View
         private String user;
         private String selectedFilm;
         private String date;
-        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<string> miejsca, String date)
+        private List<int> miejsca;
+        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<int> miejsca, String date)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
             this.date = date;
+            this.miejsca = miejsca;
             JakiFilm.Content = selectedFilm;
 
             JakiRzad.Content = "Rząd";
             JakieMiejsce.Content = "Miejsce";
+            JakaSala.Content = "Sala: " +1;
             KiedyLeci.Content = date;
+            if(miejsca!=null)
             for (int i = 0; i < miejsca.Count; i = i + 2)
             {
                 JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);
                 JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
-
-
             }
 
 
@@ -53,6 +55,26 @@ namespace Cinema.View
 
         private void Potwierdz_Click(object sender, RoutedEventArgs e)
         {
+            if (miejsca != null)
+            {
+                Cinema.Controller.Sala s = new Cinema.Controller.Sala();
+                for (int i = 0; i < miejsca.Count; i = i + 2)
+                {
+                    
+                    JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);
+                    JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
+                    s.rezerwacjamiejsce(miejsca.ElementAt(i)+1, miejsca.ElementAt(i+1)+ 1);
+
+                }
+
+                
+                
+            }
+            
+
+
+
+
             Platnosc platnosc = new Platnosc(user);
             platnosc.Show();
             this.Close();
