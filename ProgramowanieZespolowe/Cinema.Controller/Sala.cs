@@ -12,12 +12,12 @@ namespace Cinema.Controller
 
         Model.SalaB salaB = new SalaB();
 
-        public byte[][] sala(int id)
+        public byte[][] sala(int id_sala,int id_screening)
         {
             //1 bo nie ma innej w baze
-            id = 1;
+            id_sala = 1;
             //2 wartosci z bazy
-            int[] wielkosc = salaB.wielkosc(id);
+            int[] wielkosc = salaB.wielkosc(id_sala);
             //utworzenie tablicy byte[row][number] wypełninej 0
             byte[][] sala = new byte[wielkosc[0]][];
             for (int i = 0; i < sala.Length; i++)
@@ -31,7 +31,7 @@ namespace Cinema.Controller
                     sala[i][j] = 0;
                 }
             }
-            List<int> zajete = salaB.miejca_zarezerwowane(1);
+            List<int> zajete = salaB.miejca_zarezerwowane(id_screening);
             if (zajete == null)
             {
                 return sala;
@@ -40,10 +40,6 @@ namespace Cinema.Controller
             {
                 sala[zajete.ElementAt(i) - 1][zajete.ElementAt(i + 1) - 1] = 1;
             }
-
-
-
-
             return sala;
         }
 
@@ -53,10 +49,10 @@ namespace Cinema.Controller
 
         }
 
-        public void rezerwacjamiejsce(int row, int number)//int ilosc miejcs w rzedzie dl tablicy
+        public void rezerwacjamiejsce(int row, int number,int screening_id)//int ilosc miejcs w rzedzie dl tablicy
         {
 
-            salaB.rezerwacjamiejsce(15, ((row - 1) * 7) + number, 1);
+            salaB.rezerwacjamiejsce(15, ((row - 1) * 7) + number,screening_id);
         }
         public void czysc()
         {

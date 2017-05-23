@@ -22,6 +22,7 @@ namespace Cinema.View {
         private String selectedFilm;
         //kto sie zalogowal
         private String user;
+        private int id_film;
         public MainWindow(String user) {
             InitializeComponent();
             this.user = user;
@@ -39,6 +40,10 @@ namespace Cinema.View {
             string b = a.Substring(0, a.IndexOf('.'));
             string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
             string d = a.Substring(a.IndexOf(c) + 3, 4);
+            //string a = date.ToString(); moje nie ruszać (Kamil)
+            //string b = a.Substring(8, 2);
+            //string c = a.Substring(5, 2);
+            //string d = a.Substring(0, 4);
 
             List<string> tab = new List<string>();
             Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
@@ -58,8 +63,8 @@ namespace Cinema.View {
                     selectedFilm = test;
                     comboBox.Items.Clear();
                     Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
-                    int idFilmu = a.getId(selectedFilm);
-                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(idFilmu);
+                    id_film = a.getId(selectedFilm);
+                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film);
                     for (int i = 0; i < tabgodziny.Count; i++) comboBox.Items.Add(tabgodziny[i]);
                 }
             }
@@ -80,7 +85,9 @@ namespace Cinema.View {
             if(selectedFilm != null && comboBox.SelectedItem != null)
             {
                 string date = comboBox.SelectedItem.ToString();
-                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date);
+                Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
+                int id_screening = ac.id_screening_wybranego(id_film, date);
+                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date, id_screening);
                 salakinowa.Show();
                 this.Close();
             }

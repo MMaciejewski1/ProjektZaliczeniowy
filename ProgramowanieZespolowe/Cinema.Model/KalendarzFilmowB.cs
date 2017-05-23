@@ -44,6 +44,22 @@ namespace Cinema.Model
             cn.Close();
             return tab;
         }
+        public int screening_id(int idFilmu, string godzina)
+        {
+            InfoOFilmieB b = new InfoOFilmieB();
+            int screening_id = 1;
+            cn.Open();
+            MySqlCommand cmd = new MySqlCommand("SELECT id  FROM screening where Time(screening_start)='" + godzina + "' and movie_id="+ idFilmu,cn);
+            MySqlDataReader a = cmd.ExecuteReader();
+            if(a.HasRows)
+            while (a.Read())
+            {
+                screening_id = a.GetInt32(0);
+            }
+            a.Close();
+            cn.Close();
+            return screening_id;
+        }
 
     }
 

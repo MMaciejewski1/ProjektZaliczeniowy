@@ -9,7 +9,7 @@ namespace Cinema.Model
 {
     public class SalaB
     {
-        MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;");
+        MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;;allow zero datetime=yes;Allow User Variables=True");
 
         public int[] wielkosc(int id)
         {
@@ -26,11 +26,11 @@ namespace Cinema.Model
             return wartosci;
 
         }
-        public List<int> miejca_zarezerwowane(int id)
+        public List<int> miejca_zarezerwowane(int id_screening)
         {
 
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT seat_id,row,number FROM seat join seat_reserved on seat.id = seat_reserved.seat_id where screening_id=" + id, cn);
+            MySqlCommand cmd = new MySqlCommand("SELECT seat_id,row,number FROM seat join seat_reserved on seat.id = seat_reserved.seat_id where screening_id=" + id_screening, cn);
             MySqlDataReader a = cmd.ExecuteReader();
 
             if (a.HasRows == false)
@@ -38,15 +38,11 @@ namespace Cinema.Model
                 return null;
             }
             List<int> zajete = new List<int>();
-            //int[][] zajete = new int[a.][];
             while (a.Read())
             {
                 zajete.Add(a.GetInt32(1));
                 zajete.Add(a.GetInt32(2));
             }
-
-
-
             cn.Close();
             return zajete;
         }
@@ -65,7 +61,11 @@ namespace Cinema.Model
 
             cn.Open();
             //Set @id = Select max(id) from seat_reserved+1
-            MySqlCommand cmd = new MySqlCommand("  Insert into  seat_reserved values (" + seatid + "," + seatid + "," + reservation_id + "," + screening_id + ")", cn);
+            // MySqlCommand cmd = new MySqlCommand("  Insert into  seat_reserved values (" + seatid + "," + seatid + "," + reservation_id + "," + screening_id + ")", cn);
+            // MySqlCommand cmd = new MySqlCommand(" DECLARE id int"+
+            //     " Set @id = (Select max('id') from seat_reserved)+1"  +
+            MySqlCommand cmd = new MySqlCommand(" Set @idv  := (Select max(id) from seat_reserved)+1;" +
+                 " Insert into  seat_reserved values (@idv, " + seatid + "," + reservation_id + "," + screening_id + ")", cn);
             cmd.ExecuteNonQuery();
 
             cn.Close();
@@ -73,7 +73,8 @@ namespace Cinema.Model
         public void czysc()
         {
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("delete from seat_reserved where reservation_id=15", cn);
+            //dodaje jedno miejsce żeby int się incrementował bo wykasowaniu wszystkiego
+            MySqlCommand cmd = new MySqlCommand("delete from seat_reserved where reservation_id=15; insert into seat_reserved values(1,1,15,1)", cn);
             cmd.ExecuteNonQuery();
 
             cn.Close();

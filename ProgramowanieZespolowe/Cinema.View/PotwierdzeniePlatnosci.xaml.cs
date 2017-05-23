@@ -23,13 +23,15 @@ namespace Cinema.View
         private String selectedFilm;
         private String date;
         private List<int> miejsca;
-        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<int> miejsca, String date)
+        private int screening_id;
+        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<int> miejsca, String date,int screening_id)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
             this.date = date;
             this.miejsca = miejsca;
+            this.screening_id = screening_id;
             JakiFilm.Content = selectedFilm;
 
             JakiRzad.Content = "Rząd";
@@ -63,7 +65,7 @@ namespace Cinema.View
                     
                     JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);
                     JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
-                    s.rezerwacjamiejsce(miejsca.ElementAt(i)+1, miejsca.ElementAt(i+1)+ 1);
+                    s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i+1),screening_id);
 
                 }
 

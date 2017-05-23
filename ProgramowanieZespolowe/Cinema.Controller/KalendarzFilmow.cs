@@ -20,5 +20,9 @@ namespace Cinema.Controller
         {
             return kfb.godziny(idfilmu);
         }
+        public int id_screening_wybranego(int idfilmu,string godzina)
+        {
+            return kfb.screening_id(idfilmu,godzina);
+        }
     }
 }

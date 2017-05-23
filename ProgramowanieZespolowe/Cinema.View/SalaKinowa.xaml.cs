@@ -25,17 +25,18 @@ namespace Cinema.View
         private byte[][] sala;
         private String date;
         List<int> miejsca = new List<int>();
-        public SalaKinowa(String user, String selectedFilm, String date)
+        public SalaKinowa(String user, String selectedFilm, String date,int screening_id)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
             this.date = date;
+            this.screening_id = screening_id;
             if (user.Equals("user")){
                 buttonclear.Visibility = System.Windows.Visibility.Hidden;
             };
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
-            sala = s.sala(screening_id);
+            sala = s.sala(1, screening_id);//1 bo tylko 1 sala dostępna
             for (int i = 0; i < sala.Length; i++)
             {
                 for (int j = 0; j < sala[i].Length; j++)
@@ -102,15 +103,15 @@ namespace Cinema.View
 
             if (miejsca.Count != 0)
             {
-                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca, date);
+                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca, date,screening_id);
                 potplatnosc.Show();
                 this.Close();
             }
             else
             {
-               PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null, date);
-                potplatnosc.Show();
-                this.Close();
+               //PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, null, date);
+               // potplatnosc.Show();
+               // this.Close();
             }
 
         }
@@ -118,7 +119,7 @@ namespace Cinema.View
         {
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
             s.czysc();
-            SalaKinowa odswiez = new SalaKinowa(this.user, this.selectedFilm, this.date);
+            SalaKinowa odswiez = new SalaKinowa(this.user, this.selectedFilm, this.date,this.screening_id);
             odswiez.Show();
             this.Close();
         }
