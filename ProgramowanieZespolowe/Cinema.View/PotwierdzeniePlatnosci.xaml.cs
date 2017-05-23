@@ -22,9 +22,10 @@ namespace Cinema.View
         private String user;
         private String selectedFilm;
         private String date;
+        private String date0;
         private List<int> miejsca;
         private int screening_id;
-        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<int> miejsca, String date,int screening_id)
+        public PotwierdzeniePlatnosci(String user, String selectedFilm,List<int> miejsca, String date,int screening_id,String date0)
         {
             InitializeComponent();
             this.user = user;
@@ -32,12 +33,13 @@ namespace Cinema.View
             this.date = date;
             this.miejsca = miejsca;
             this.screening_id = screening_id;
+            this.date0 = date0;
             JakiFilm.Content = selectedFilm;
 
             JakiRzad.Content = "Rząd";
             JakieMiejsce.Content = "Miejsce";
             JakaSala.Content = "Sala: " +1;
-            KiedyLeci.Content = date;
+            KiedyLeci.Content = date0+" "+date;
             if(miejsca!=null)
             for (int i = 0; i < miejsca.Count; i = i + 2)
             {
@@ -60,12 +62,13 @@ namespace Cinema.View
             if (miejsca != null)
             {
                 Cinema.Controller.Sala s = new Cinema.Controller.Sala();
+                int rezerwation_id=s.rezerwacja_nowa(screening_id,2,2);
                 for (int i = 0; i < miejsca.Count; i = i + 2)
                 {
                     
                     JakiRzad.Content += Environment.NewLine + miejsca.ElementAt(i);
                     JakieMiejsce.Content += Environment.NewLine + miejsca.ElementAt(i + 1);
-                    s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i+1),screening_id);
+                    s.rezerwacjamiejsce(miejsca.ElementAt(i), miejsca.ElementAt(i+1),screening_id,rezerwation_id);
 
                 }
 

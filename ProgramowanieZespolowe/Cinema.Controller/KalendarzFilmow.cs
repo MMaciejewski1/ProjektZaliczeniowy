@@ -16,13 +16,13 @@ namespace Cinema.Controller
         {
             return kfb.listaFilmow(year, month,day);
         }
-        public List<String> getGodziny(int idfilmu)
+        public List<String> getGodziny(int idfilmu,string data)
         {
-            return kfb.godziny(idfilmu);
+            return kfb.godziny(idfilmu,data);
         }
-        public int id_screening_wybranego(int idfilmu,string godzina)
+        public int id_screening_wybranego(int idfilmu,string godzina,string data)
         {
-            return kfb.screening_id(idfilmu,godzina);
+            return kfb.screening_id(idfilmu,godzina, data);
         }
     }
 }

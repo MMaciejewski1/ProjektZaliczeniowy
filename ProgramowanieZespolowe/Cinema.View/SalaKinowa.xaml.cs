@@ -24,13 +24,15 @@ namespace Cinema.View
         private int screening_id = 1;
         private byte[][] sala;
         private String date;
+        private String date0;
         List<int> miejsca = new List<int>();
-        public SalaKinowa(String user, String selectedFilm, String date,int screening_id)
+        public SalaKinowa(String user, String selectedFilm, String date,int screening_id,string date0)
         {
             InitializeComponent();
             this.user = user;
             this.selectedFilm = selectedFilm;
             this.date = date;
+            this.date0 = date0;
             this.screening_id = screening_id;
             if (user.Equals("user")){
                 buttonclear.Visibility = System.Windows.Visibility.Hidden;
@@ -103,7 +105,7 @@ namespace Cinema.View
 
             if (miejsca.Count != 0)
             {
-                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca, date,screening_id);
+                PotwierdzeniePlatnosci potplatnosc = new PotwierdzeniePlatnosci(user, selectedFilm, miejsca, date,screening_id,this.date0);
                 potplatnosc.Show();
                 this.Close();
             }
@@ -117,9 +119,14 @@ namespace Cinema.View
         }
         private void buttonclear_Click(object sender, RoutedEventArgs e)
         {
+
             Cinema.Controller.Sala s = new Cinema.Controller.Sala();
-            s.czysc();
-            SalaKinowa odswiez = new SalaKinowa(this.user, this.selectedFilm, this.date,this.screening_id);
+            s.czysc();//do czyszczenia z wszystkich sal
+            
+            //usuwa rezerwacje wszystkich miejsc które były wybrane w tym samym momencie co 1,1
+            //jeśli podstawic pod 1,1 rząd i miejsce to mogłoby być usuwanie rezerwacji przez kasjera
+            //MessageBox.Show( s.usun_rezerwacje(selectedFilm, 1,1, date, this.date0).ToString());
+            SalaKinowa odswiez = new SalaKinowa(this.user, this.selectedFilm, this.date,this.screening_id, this.date0);
             odswiez.Show();
             this.Close();
         }

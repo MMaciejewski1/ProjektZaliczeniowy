@@ -44,19 +44,22 @@ namespace Cinema.Controller
         }
 
 
-        public void rezerwacja_nowa()
+        public int rezerwacja_nowa(int screenid, int user_id, int user_id2)
         {
-
+          return  salaB.rezerwacja(screenid,2,2);
         }
 
-        public void rezerwacjamiejsce(int row, int number,int screening_id)//int ilosc miejcs w rzedzie dl tablicy
+        public void rezerwacjamiejsce(int row, int number,int screening_id,int rezerwation_id)//int ilosc miejcs w rzedzie dl tablicy
         {
-
-            salaB.rezerwacjamiejsce(15, ((row - 1) * 7) + number,screening_id);
+            salaB.rezerwacjamiejsce(rezerwation_id, ((row - 1) * 7) + number,screening_id);
         }
         public void czysc()
         {
             salaB.czysc();
+        }
+        public int usun_rezerwacje(string film_id, int row, int numer,string godzina,string data)
+        {
+            return salaB.usun_rezerwacje(film_id, (row-1)*7+numer, data+" "+godzina);
         }
     }
 }

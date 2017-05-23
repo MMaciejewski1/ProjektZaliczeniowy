@@ -46,15 +46,22 @@ namespace Cinema.Model
             cn.Close();
             return zajete;
         }
-        public void rezerwacja(int screenid, int user_id, int user_id2)
+        public int rezerwacja(int screenid, int user_id, int user_id2)
         {
             user_id = 2;
             user_id2 = 2;
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("  Insert into  reservation values (15," + screenid + ",2,1,'test',true,2,false)", cn);
+            MySqlCommand cmd = new MySqlCommand("Set @idv:= (Select max(id) from reservation) + 1; " +
+                "  Insert into  reservation values (@idv," + screenid + ",2,'brak',true,2,false,true);"+
+                " select @idv", cn);
             MySqlDataReader a = cmd.ExecuteReader();
-
-            cn.Close();
+            int id_rez=-1;
+            while (a.Read())
+            {
+                id_rez=a.GetInt32(0);
+            }
+                cn.Close();
+            return id_rez;
         }
         public void rezerwacjamiejsce(int reservation_id, int seatid, int screening_id)
         {
@@ -73,12 +80,26 @@ namespace Cinema.Model
         public void czysc()
         {
             cn.Open();
-            //dodaje jedno miejsce żeby int się incrementował bo wykasowaniu wszystkiego
-            MySqlCommand cmd = new MySqlCommand("delete from seat_reserved where reservation_id=15; insert into seat_reserved values(1,1,15,1)", cn);
+            //dodaje jedno miejsce żeby int się incrementował po wykasowaniu wszystkiego
+            MySqlCommand cmd = new MySqlCommand("delete from seat_reserved; insert into seat_reserved values(1,1,15,1)", cn);
             cmd.ExecuteNonQuery();
 
             cn.Close();
         }
+        public int usun_rezerwacje(string film,int seat,string start)
+        {
+            cn.Open();
 
+            MySqlCommand cmd = new MySqlCommand(
+                " Set @idfilm:= (Select id from movie where title='" + film + "');"+
+                " Set @idrez := (Select reservation.id from reservation join seat_reserved on reservation.id = seat_reserved.reservation_id join screening on reservation.screening_id=screening.id where screening.screening_start='" + start + "' and screening.movie_id=@idfilm  and  seat_reserved.seat_id=" + seat + ");" +
+                " delete from seat_reserved where reservation_id=@idrez;" +
+                " delete from reservation where id=@idrez", cn);
+           // MySqlCommand cmd = new MySqlCommand("delete from seat_reserved; insert into seat_reserved values(1,1,15,1)", cn);
+           int ret= cmd.ExecuteNonQuery();
+
+            cn.Close();
+            return ret;
+        }
     }
 }

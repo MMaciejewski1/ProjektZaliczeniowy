@@ -12,11 +12,13 @@ namespace Cinema.Model
 
         MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;");
 
-        public List<String> godziny(int idFilmu)        {
+        public List<String> godziny(int idFilmu,string data)        {
             InfoOFilmieB b = new InfoOFilmieB();
             List<String> tab = new List<String>();
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id ="+ idFilmu, cn);
+            //nie sprawdzało daty 
+            //MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id ="+ idFilmu, cn);
+            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id =" + idFilmu+ " and DATE(screening_start)='"+data+"'", cn);
             MySqlDataReader a = cmd.ExecuteReader();
             while (a.Read())
             {
@@ -44,12 +46,12 @@ namespace Cinema.Model
             cn.Close();
             return tab;
         }
-        public int screening_id(int idFilmu, string godzina)
+        public int screening_id(int idFilmu, string godzina,string data)
         {
             InfoOFilmieB b = new InfoOFilmieB();
             int screening_id = 1;
             cn.Open();
-            MySqlCommand cmd = new MySqlCommand("SELECT id  FROM screening where Time(screening_start)='" + godzina + "' and movie_id="+ idFilmu,cn);
+            MySqlCommand cmd = new MySqlCommand("SELECT id  FROM screening where screening_start='" +data+" "+ godzina + "' and movie_id="+ idFilmu,cn);
             MySqlDataReader a = cmd.ExecuteReader();
             if(a.HasRows)
             while (a.Read())

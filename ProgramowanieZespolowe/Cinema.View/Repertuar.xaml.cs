@@ -35,12 +35,13 @@ namespace Cinema.View {
         private void calendar_SelectedDateChanged(object sender, RoutedEventArgs e)
         {
             listView.Items.Clear();
+            comboBox.Items.Clear();
             DateTime? date = calendar.SelectedDate;
             string a = date.ToString();
             string b = a.Substring(0, a.IndexOf('.'));
             string c = a.Substring(a.IndexOf('.') + 1, a.IndexOf('.'));
             string d = a.Substring(a.IndexOf(c) + 3, 4);
-            //string a = date.ToString(); moje nie ruszać (Kamil)
+            //string a = date.ToString(); //moje nie ruszać (Kamil)
             //string b = a.Substring(8, 2);
             //string c = a.Substring(5, 2);
             //string d = a.Substring(0, 4);
@@ -64,7 +65,7 @@ namespace Cinema.View {
                     comboBox.Items.Clear();
                     Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
                     id_film = a.getId(selectedFilm);
-                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film);
+                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film,calendar.SelectedDate.Value.ToShortDateString());
                     for (int i = 0; i < tabgodziny.Count; i++) comboBox.Items.Add(tabgodziny[i]);
                 }
             }
@@ -86,8 +87,8 @@ namespace Cinema.View {
             {
                 string date = comboBox.SelectedItem.ToString();
                 Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
-                int id_screening = ac.id_screening_wybranego(id_film, date);
-                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date, id_screening);
+                int id_screening = ac.id_screening_wybranego(id_film, date, calendar.SelectedDate.Value.ToShortDateString());
+                SalaKinowa salakinowa = new SalaKinowa(user, selectedFilm, date, id_screening,calendar.SelectedDate.Value.ToShortDateString());
                 salakinowa.Show();
                 this.Close();
             }
