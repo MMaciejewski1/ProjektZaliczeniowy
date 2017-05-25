@@ -21,8 +21,6 @@ C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.V
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\MySql.Data.dll
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\Cinema.Model.dll
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\Cinema.Model.pdb
-C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\logowanie.g.cs
-C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\logowanie.baml
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\InfoOFilmie.g.cs
 C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\InfoOFilmie.baml
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\bin\Debug\Cinema.View.exe.config
@@ -209,3 +207,9 @@ C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cin
 C:\Users\Kamildo\Documents\GitHub\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.baml
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.g.cs
 C:\Users\Szusti\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.baml
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.g.cs
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Repertuar.g.cs
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\SalaKinowa.g.cs
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Registration.baml
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\Repertuar.baml
+C:\Users\Majkel\Source\Repos\ProjektZaliczeniowy\ProgramowanieZespolowe\Cinema.View\obj\Debug\SalaKinowa.baml

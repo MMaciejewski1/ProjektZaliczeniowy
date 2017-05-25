@@ -45,10 +45,8 @@ namespace Cinema.View {
             //string b = a.Substring(8, 2);
             //string c = a.Substring(5, 2);
             //string d = a.Substring(0, 4);
-
             List<string> tab = new List<string>();
             Cinema.Controller.KalendarzFilmow ac = new Cinema.Controller.KalendarzFilmow();
-            label1.Content = date.ToString();
             tab = ac.getlistaFilmow(d, c, b);
             for (int i = 0; i < tab.Count; i++) listView.Items.Add(tab[i]);
     
@@ -65,7 +63,16 @@ namespace Cinema.View {
                     comboBox.Items.Clear();
                     Cinema.Controller.InfoOFilmie a = new Cinema.Controller.InfoOFilmie();
                     id_film = a.getId(selectedFilm);
-                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film,calendar.SelectedDate.Value.ToShortDateString());
+                    DateTime? date = calendar.SelectedDate;
+                    //string aa = date.ToString(); //dla Kamila bo ma dziwne ustawienia daty
+                    //string b = aa.Substring(8, 2);
+                    //string c = aa.Substring(5, 2);
+                    //string d = aa.Substring(0, 4);
+                    string aa = date.ToString();
+                    string b = aa.Substring(0, aa.IndexOf('.'));
+                    string c = aa.Substring(aa.IndexOf('.') + 1, aa.IndexOf('.'));
+                    string d = aa.Substring(aa.IndexOf(c) + 3, 4);
+                    List<string> tabgodziny = new Cinema.Controller.KalendarzFilmow().getGodziny(id_film, d, c, b);
                     for (int i = 0; i < tabgodziny.Count; i++) comboBox.Items.Add(tabgodziny[i]);
                 }
             }

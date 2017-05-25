@@ -12,13 +12,16 @@ namespace Cinema.Model
 
         MySqlConnection cn = new MySqlConnection(@"server=lamp.ii.us.edu.pl;user id=ii302052;persistsecurityinfo=True;database=ii302052;password=123456Op*;");
 
-        public List<String> godziny(int idFilmu,string data)        {
+        public List<String> godziny(int idFilmu,String year, String month, String day)        {
             InfoOFilmieB b = new InfoOFilmieB();
             List<String> tab = new List<String>();
             cn.Open();
             //nie sprawdzało daty 
             //MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id ="+ idFilmu, cn);
-            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id =" + idFilmu+ " and DATE(screening_start)='"+data+"'", cn);
+            String rok = " YEAR(screening_start) = '" + year + "'";
+            String miesiac = " MONTH(screening_start) = '" + month + "'";
+            String dzien = " DAY(screening_start) = '" + day + "'";
+            MySqlCommand cmd = new MySqlCommand("  SELECT TIME(screening_start) as aa FROM screening where movie_id = " + idFilmu+ " and " + rok + "and" + miesiac + "and" +dzien, cn);
             MySqlDataReader a = cmd.ExecuteReader();
             while (a.Read())
             {

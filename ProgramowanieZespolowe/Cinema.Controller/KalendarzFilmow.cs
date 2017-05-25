@@ -16,9 +16,9 @@ namespace Cinema.Controller
         {
             return kfb.listaFilmow(year, month,day);
         }
-        public List<String> getGodziny(int idfilmu,string data)
+        public List<String> getGodziny(int idfilmu,String year, String month, String day)
         {
-            return kfb.godziny(idfilmu,data);
+            return kfb.godziny(idfilmu, year, month, day);
         }
         public int id_screening_wybranego(int idfilmu,string godzina,string data)
         {

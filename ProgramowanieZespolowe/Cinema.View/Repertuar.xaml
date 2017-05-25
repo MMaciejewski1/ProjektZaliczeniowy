@@ -8,7 +8,7 @@
         Title="Repertuar" Height="400" Width="600">
     <Grid>
         <Grid Margin="10">
-            <DatePicker x:Name="calendar" Margin="10,41,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="262"  SelectedDateChanged="calendar_SelectedDateChanged"/>
+            <DatePicker x:Name="calendar" Margin="10,41,0,0"  VerticalAlignment="Top" HorizontalAlignment="Left" Width="262"  SelectedDateChanged="calendar_SelectedDateChanged"/>
             <ListView x:Name="listView" Margin="10,107,10,23" SelectionChanged="listView_SelectionChanged">
                 <ListView.View>
                     <GridView>
